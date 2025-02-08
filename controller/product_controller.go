@@ -20,7 +20,6 @@ func NewProductController(usecase usecase.ProductUseCase) productController {
 	}
 }
 
-
 func (p *productController) GetProducts(ctx *gin.Context) {
 	products, err := p.productUseCase.GetProducts()
 
@@ -139,3 +138,4 @@ func (p *productController) DeleteProduct(ctx *gin.Context) {
 
 	ctx.JSON(http.StatusOK, "Product deleted.")
 }
+
